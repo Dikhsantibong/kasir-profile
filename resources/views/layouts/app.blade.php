@@ -1,9 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@yield('title', 'Nova Free Bootstrap Template for Agency')</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@yield('title', 'KasirCerdas - Solusi Kasir Digital untuk Bisnis Anda')</title>
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="{{ asset('nova-template/assets/vendors/bootstrap/bootstrap.min.css') }}">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="{{ asset('nova-template/assets/vendors/bootstrap-icons/font/bootstrap-icons.css') }}">
+    <!-- Template Custom CSS -->
+    <link rel="stylesheet" href="{{ asset('nova-template/assets/css/style.css') }}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
     <!-- ======= Google Font =======-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,17 +39,13 @@
     @yield('styles')
 </head>
 <body>
-    <!-- ======= Site Wrap =======-->
-    <div class="site-wrap">
-        @include('layouts.partials.header')
+    @include('layouts.partials.header')
 
-        <!-- ======= Main =======-->
-        <main>
-            @yield('content')
-        </main>
+    <main>
+        @yield('content')
+    </main>
 
-        @include('layouts.partials.footer')
-    </div>
+    @include('layouts.partials.footer')
 
     <!-- ======= Back to Top =======-->
     <button id="back-to-top"><i class="bi bi-arrow-up-short"></i></button>
@@ -56,6 +61,9 @@
     <script src="{{ asset('nova-template/assets/vendors/purecounter/purecounter.js') }}"></script>
     <script src="{{ asset('nova-template/assets/js/custom.js') }}"></script>
     <script src="{{ asset('nova-template/assets/js/send_email.js') }}"></script>
+
+    <!-- Custom JS -->
+    <script src="{{ asset('js/app.js') }}"></script>
 
     @yield('scripts')
 </body>
